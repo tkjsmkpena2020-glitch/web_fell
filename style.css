@@ -1,0 +1,69 @@
+* { box-sizing: border-box; margin: 0; padding: 0 }
+body {
+  font-family: Inter, sans-serif;
+  background:#030417;
+  color:#fff;
+  line-height:1.6;
+}
+a { color:inherit; text-decoration:none }
+
+.container { max-width:1100px; margin:auto; padding:20px }
+
+.site-header {
+  position:sticky; top:0; background:#030417cc; backdrop-filter:blur(6px)
+}
+.header-inner { display:flex; justify-content:space-between; align-items:center }
+.nav a { margin-left:20px }
+.menu-toggle { display:none; background:none; color:white; font-size:22px }
+
+.hero {
+  min-height:80vh;
+  display:flex; align-items:center;
+  position:relative; overflow:hidden
+}
+.hero h1 { font-size:64px }
+.lead { opacity:.8 }
+.hero-cta { margin-top:20px }
+.btn {
+  padding:10px 18px; border-radius:8px;
+  background:#5b6cff; display:inline-block
+}
+.btn.ghost { background:transparent; border:1px solid #5b6cff }
+
+.section { padding:80px 0 }
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px }
+
+.bar {
+  background:#1a1d3a; border-radius:10px; overflow:hidden; height:8px; margin:10px 0
+}
+.bar span {
+  display:block; height:100%; width:0;
+  background:#5b6cff; transition:width 1.5s ease
+}
+
+.portfolio-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px
+}
+.card {
+  background:#0d1030; padding:15px; border-radius:14px;
+  cursor:pointer; transition:.3s
+}
+.card:hover { transform:translateY(-6px) }
+.card img { width:100%; border-radius:10px }
+
+.site-footer { text-align:center; padding:30px; opacity:.6 }
+
+#lightbox {
+  position:fixed; inset:0;
+  background:#000a; display:flex; align-items:center; justify-content:center
+}
+.lightbox-inner {
+  background:#0d1030; padding:20px; border-radius:14px; max-width:400px
+}
+#lbClose { background:none; color:white; font-size:20px; float:right }
+
+@media(max-width:768px){
+  .nav { display:none; position:absolute; top:60px; right:20px; background:#0d1030; padding:10px }
+  .nav.open { display:block }
+  .menu-toggle { display:block }
+}
